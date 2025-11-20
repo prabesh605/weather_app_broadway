@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:weather_app/weather_model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,15 +25,25 @@ class _HomeScreenState extends State<HomeScreen> {
       final baseUrl =
           "https://api.openweathermap.org/data/2.5/weather?q=$cityName&units=metric&appid=";
 
-      final response = await http.get(Uri.parse(baseUrl + apiKey));
+      ///step 1 base url
+
+      final response = await http.get(
+        Uri.parse(baseUrl + apiKey),
+      ); //step 2 make a get request
 
       response.statusCode;
       print("Status code: ${response.statusCode}");
-      final data = jsonDecode(response.body);
+      final data = jsonDecode(response.body); //step 3 decode the response
+      final weatherData = Weather.fromJson(data);
+
       setState(() {
-        temperature = "${data['main']['temp']}";
-        humidity = "${data['main']['humidity']}";
-        speed = "${data['wind']['speed']}";
+        //step 4 map in variables
+        temperature = weatherData.main.temp.toString();
+        humidity = weatherData.main.humidity.toString();
+        speed = weatherData.wind.speed.toString();
+        // temperature = "${data['main']['temp']}";
+        // humidity = "${data['main']['humidity']}";
+        // speed = "${data['wind']['speed']}";
       });
 
       // print("Temperature: $temperature");
