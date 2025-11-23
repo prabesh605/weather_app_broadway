@@ -3,7 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:weather_app/mobile_model.dart';
+import 'package:weather_app/mobile/mobile_model.dart';
 
 class MobilePage extends StatefulWidget {
   const MobilePage({super.key});
