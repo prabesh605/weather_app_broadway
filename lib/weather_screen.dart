@@ -245,9 +245,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
               SizedBox(height: 10),
               Align(
                 alignment: Alignment.center,
-                child: Text(
-                  iconValue,
-                  style: TextStyle(fontSize: 140, color: Colors.white),
+                child: Hero(
+                  tag: "hero",
+                  child: Text(
+                    iconValue,
+                    style: TextStyle(fontSize: 140, color: Colors.white),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
