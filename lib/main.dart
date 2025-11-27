@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/pages/screen_one.dart';
+import 'package:weather_app/splash_screen.dart';
 import 'package:weather_app/weather_screen.dart';
 import 'package:weather_app/welcome_screen.dart';
 // import 'package:weather_app/mobile_page.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData.light(),
-      home: ScreenOne(),
+      home: SplashScreen(),
     );
   }
 }

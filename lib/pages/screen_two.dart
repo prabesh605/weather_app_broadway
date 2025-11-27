@@ -15,11 +15,11 @@ class _ScreenTwoState extends State<ScreenTwo> {
       body: Center(
         child: Column(
           children: [
-            // Hero(
-            //   tag: 'weather',
-            //   child: 
-            //   Image.asset('assets/weather.png', height: 200),
-            // ),
+            Hero(
+              tag: 'weather',
+              child: 
+              Image.asset('assets/weather.png', height: 200),
+            ),
             SizedBox(height: 60),
             ElevatedButton(
               onPressed: () {

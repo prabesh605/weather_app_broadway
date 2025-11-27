@@ -6,6 +6,7 @@ import 'package:weather_app/service.dart';
 import 'package:weather_app/weather_model.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({super.key});
